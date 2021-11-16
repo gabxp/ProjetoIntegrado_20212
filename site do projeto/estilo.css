@@ -1,0 +1,378 @@
+html{
+                scroll-behavior: smooth;
+            }
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+
+
+body{
+	background: #1e1d1f;
+}
+#teste{
+  width: 400px;
+  height: 300px;
+  background-image: url(imagemprincipal.jpeg);
+}
+header{
+	height: 90px;
+	display: flex;
+	padding: 10px 100px;
+	justify-content: space-between;
+	position: sticky;
+	top: 0;
+	vertical-align: middle;
+	align-items: center;
+	margin-bottom: 50px;
+	background: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header img.logo{
+	width: 184px;
+	height: 81px;
+}
+
+header nav{
+	display: flex;
+	justify-content: space-between;
+	width: 300px;
+	height: 30px;
+	
+}
+
+header nav a{
+ text-decoration: none;
+ display: flex;
+align-items: center;
+ width: 80px;
+ height: 30px;
+ justify-content: center;
+ color: white;
+ background-color: #8f1fff;
+ transition: 0.2s;
+ border-radius: 5px;
+}
+
+header nav a:hover{
+	background: white;
+	border: 1px solid #8f1fff;
+	color: #8f1fff;
+	 transition: 0.2s;
+    box-sizing: border-box;
+}
+
+
+main section.banner{
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 30px;
+}
+
+main section .img_principal{
+	width: 900px;
+	border-radius: 5px;
+}
+
+section.noticias {
+	width: 900px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+section.noticias article{
+    background: rgb(256, 256, 256);
+    width: 425px;
+    height: 425px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+section.fale_conosco{
+    width: 900px;
+	margin: 0 auto;
+	border-radius: 5px;
+	margin-bottom: 50px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    background: rgb(256, 256, 256);
+    padding: 50px 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+}
+
+section form{
+    width: 400px;
+    text-align: left;
+    margin: 30px auto 0;
+    
+}
+
+section form input{
+    margin-bottom: 10px;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 100;
+    outline: none;
+    padding-left: 10px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    transition: 0.1s;
+}
+
+section form input:focus, section form input:hover{
+    border: 2px solid #8f1fff;
+    transition: 0.1s;
+}
+
+section form #mensagem{
+    height: 100px;
+    width: 100%;
+    font-size: 15px;
+    outline: none;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 2px;
+    resize: none;
+}
+
+section form #mensagem:hover{
+    border: 2px solid #8f1fff;
+}
+
+section form button{
+    display: block;
+    width: 150px;
+    height: 40px;
+    margin: 20px auto 0;
+    background: #8f1fff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor:pointer;
+    border: 1px solid #8f1fff;
+    border-radius: 2px;
+}
+
+.img{
+    height: 50%;
+    width: 50%;
+    margin-left: 100px;
+    margin-top: 30px;
+}
+
+
+p{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.img2{
+    height: 50%;
+    width: 85%;
+    margin-left: 35px;
+    margin-top: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: #8f1fff;
+}
+
+h1{
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 30px;
+    color: white;
+}
+
+.img3{
+    width: 60%;
+    height: 40%;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+
+/*FOOTER*/ 
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+.content1{
+  position: relative;
+  margin: 130px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+.content1 .text{
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+}
+.content1 .p{
+  font-size: 2.1875rem;
+  font-weight: 600;
+  color: white;
+}
+footer{
+  position: absolute;
+  color: white;
+  width: 100%;
+  background: #111;
+}
+.main-content{
+  display: flex;
+}
+.main-content .box{
+  flex-basis: 50%;
+  padding: 10px 20px;
+}
+.box h2{
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.box .content{
+  margin: 20px 0 0 0;
+  position: relative;
+}
+.box .content:before{
+  position: absolute;
+  content: '';
+  top: -10px;
+  height: 2px;
+  width: 100%;
+  background: #1a1a1a;
+}
+.box .content:after{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 15%;
+  background: #8f1fff;
+  top: -10px;
+}
+.left .content p{
+  text-align: justify;
+}
+.left .content .social{
+  margin: 20px 0 0 0;
+}
+.left .content .social a{
+  padding: 0 2px;
+}
+.left .content .social a span{
+  height: 40px;
+  width: 40px;
+  background: #1a1a1a;
+  line-height: 40px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.left .content .social a span:hover{
+  background: #a759ff;
+}
+.center .content .fas{
+  font-size: 1.4375rem;
+  background: #1a1a1a;
+  height: 45px;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.center .content .fas:hover{
+  background: #a759ff;
+}
+.center .content .text{
+  font-size: 1.0625rem;
+  font-weight: 500;
+  padding-left: 10px;
+}
+.center .content .phone{
+  margin: 15px 0;
+}
+.right form .text{
+  font-size: 1.0625rem;
+  margin-bottom: 2px;
+  color: #656565;
+}
+.right form .msg{
+  margin-top: 10px;
+}
+.right form input, .right form textarea{
+  width: 100%;
+  font-size: 1.0625rem;
+  background: #151515;
+  padding-left: 10px;
+  border: 1px solid #222222;
+}
+.right form input:focus,
+.right form textarea:focus{
+  outline-color: #3498db;
+}
+.right form input{
+  height: 35px;
+}
+.right form .btn{
+  margin-top: 10px;
+}
+.right form .btn button{
+  height: 40px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background: #8f1fff;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: .3s;
+}
+.right form .btn button:hover{
+  background: #000;
+}
+.bottom center{
+  padding: 5px;
+  font-size: 0.9375rem;
+  background: #151515;
+}
+.bottom center span{
+  color: #656565;
+}
+.bottom center a{
+  color: #8f1fff;
+  text-decoration: none;
+}
+.bottom center a:hover{
+  text-decoration: underline;
+}
+@media screen and (max-width: 900px) {
+  footer{
+    
+    bottom: 0px;
+  }
+  .main-content{
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  .main-content .box{
+    margin: 5px 0;
+  }
+}
