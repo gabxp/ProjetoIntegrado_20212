@@ -18,7 +18,7 @@ body{
   background-image: url(imagemprincipal.jpeg);
 }
 header{
-	height: 50px;
+	height: 60px;
 	display: flex;
 	padding: 10px 100px;
 	justify-content: space-between;
@@ -37,8 +37,8 @@ header nav{
 	display: flex;
 	justify-content: space-between;
 	width: 300px;
-	height: 30px;
-  margin-top: 3.9%;
+	height: 40px;
+  margin-top: 1.9%; 
 	
 }
 
@@ -53,6 +53,7 @@ align-items: center;
  background-color: #8f1fff;
  transition: 0.2s;
  border-radius: 5px;
+ 
 }
 
 header nav a:hover{
@@ -165,10 +166,12 @@ section form button{
   margin-left: 16%;
   margin-top: 5%;
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.363);
+  transition: 0.3s;
 }
 
 .img-news:hover{
   filter: brightness(90%);
+  transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -184,7 +187,10 @@ section form button{
 
 .img-bignews{
   margin-left: 20%;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.363);
+  box-shadow: 5px 5px 5px rgba(119, 102, 102, 0.363);
+  transition: 0.3s;
+  width: 554px;
+  height: 312px;
 }
 
 .img-bignews:hover{
