@@ -18,22 +18,19 @@ body{
   background-image: url(imagemprincipal.jpeg);
 }
 header{
-	height: 90px;
+	height: 50px;
 	display: flex;
 	padding: 10px 100px;
 	justify-content: space-between;
 	position: sticky;
+  box-shadow: 5px 2px 20px black;
 	top: 0;
 	vertical-align: middle;
 	align-items: center;
 	margin-bottom: 50px;
 	background: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-header img.logo{
-	width: 184px;
-	height: 81px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 555555;
 }
 
 header nav{
@@ -41,6 +38,7 @@ header nav{
 	justify-content: space-between;
 	width: 300px;
 	height: 30px;
+  margin-top: 3.9%;
 	
 }
 
@@ -163,11 +161,40 @@ section form button{
     border-radius: 2px;
 }
 
-.img{
-    height: 50%;
-    width: 50%;
-    margin-left: 100px;
-    margin-top: 30px;
+.img-news{
+  margin-left: 16%;
+  margin-top: 5%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.363);
+}
+
+.img-news:hover{
+  filter: brightness(90%);
+  transition: 0.3s;
+}
+
+.informacao{
+  margin-left: 3%;
+  margin-right: 3%;
+}
+
+.news-title{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-bignews{
+  margin-left: 20%;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.363);
+}
+
+.img-bignews:hover{
+  filter: brightness(90%);
+  transition: 0.3s;
+}
+
+.news-information{
+  margin-top: 10px;
+
 }
 
 
