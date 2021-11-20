@@ -234,11 +234,15 @@ h1{
 }
 
 .img3{
-    width: 60%;
-    height: 40%;
-    margin-left: 90px;
-    margin-top: 40px;
+    width: 15vw;
+    height: 28vh;
+    margin-left: 110px;
+    margin-top: 15px;
+    box-shadow: 5px 5px 5px rgba(119, 102, 102, 0.363);
+    transition: 0.3s;
 }
+
+
 
 /*FOOTER*/ 
 
