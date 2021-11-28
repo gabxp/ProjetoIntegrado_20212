@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="estilo.css">
   <script src="https://kit.fontawesome.com/aae369f705.js" crossorigin="anonymous"></script>
   <title>Gaming ON</title>
   <link href="imagens/LOGO_title.png">
-  <script type="text/javascript" src="dados.js"></script>
   <style type="text/css">
     html {
       scroll-behavior: smooth;
@@ -149,19 +147,20 @@
 
     <section class="fale_conosco" id="contato">
       <h2 id="fale_conosco">Entre em contato conosco</h2>
-      <form action="teste.php" method="post">
+      <form action="formulario.php" method="POST" target="_blanck">
         <label for="nome">Nome:</label>
         <br>
-        <input type="text" id="nome" placeholder="Ex: João">
+        <input type="text" id="nome" name="nome" placeholder="Ex: João">
         <br>
         <label for="email">Email:</label>
         <br>
-        <input type="email" id="email" placeholder="seuemail@dominio.com">
+        <input type="email" id="email" name="email" placeholder="seuemail@dominio.com">
         <br>
         <label for="mensagem">Mensagem:</label>
         <br>
-        <textarea id="mensagem"></textarea>
-        <button type="submit" id="enviar" onclick="InputValidation()">Enviar</button>
+        <textarea id="mensagem" name="mensagem"></textarea>
+       <input type="submit" id="enviar" ></input>
+      
       </form>
     </section>
 
