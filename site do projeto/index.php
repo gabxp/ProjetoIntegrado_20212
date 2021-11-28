@@ -149,7 +149,7 @@
 
     <section class="fale_conosco" id="contato">
       <h2 id="fale_conosco">Entre em contato conosco</h2>
-      <form action="teste.php">
+      <form action="teste.php" method="post">
         <label for="nome">Nome:</label>
         <br>
         <input type="text" id="nome" placeholder="Ex: João">
@@ -161,7 +161,7 @@
         <label for="mensagem">Mensagem:</label>
         <br>
         <textarea id="mensagem"></textarea>
-        <button type="submit" id="enviar" onclick="enviarDados()">Enviar</button>
+        <button type="submit" id="enviar" onclick="InputValidation()">Enviar</button>
       </form>
     </section>
 
