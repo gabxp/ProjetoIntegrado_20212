@@ -42,7 +42,6 @@
     cursor:pointer;
     border: 1px solid #8f1fff;
     border-radius: 2px;
-    cursor:pointer;
     }
     button:hover{
     background:#ffffff;
@@ -55,8 +54,8 @@
 <?php
   require 'conection.php';
 
-  $sql = $pdo->query('SELECT * FROM usuarios');
-  $dataBD = $sql->fetchALl(PDO::FETCH_ASSOC);
+ // $sql = $pdo->query('SELECT * FROM usuario');
+ // $dataBD = $sql->fetchALl(PDO::FETCH_ASSOC);
 
   $getData = fn($data) => $data  ? $data : header("location:index.html");
   $getDataMessage = fn($data) => $data ;
@@ -67,12 +66,12 @@
   $message = $getDataMessage(filter_input(INPUT_POST,'mensagem'));
   
   if($name && $email){
-    $pdo->query("INSERT INTO usuarios (nome,email,mensagem) VALUES ('$name','$email','$message')");
+    $pdo->query("INSERT INTO usuario (nome,email,mensagem) VALUES ('$name','$email','$message')");
   }
 
-  echo "Total de registros:" .$sql->rowCount();
-  echo "<pre>";
-  print_r($dataBD);
+  //echo "Total de registros:" .$sql->rowCount();
+ // echo "<pre>";
+  //print_r($dataBD);
   
 ?>
 
