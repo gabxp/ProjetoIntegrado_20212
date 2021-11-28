@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mensagem Form</title>
+    <title>Feeback do usuario</title>
 </head>
 <style>
     body{
-        margin:0px;
+        margin:8px;
         padding :0px;
         display:flex;
         flex-direction:column;
@@ -17,53 +17,74 @@
     }
     h2{
         color:purple;
+        margin-top:-10px;
+        
     }
     h3{
         color:red;
     }
     h4{
         color:purple;
+        margin-top:-10px;
     }
     h5{
         color:yellow;
     }
+    button{
+   
+    width: 150px;
+    height: 40px;
+    margin: 20px auto 0;
+    background: #8f1fff;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    cursor:pointer;
+    border: 1px solid #8f1fff;
+    border-radius: 2px;
+    cursor:pointer;
+    }
+    button:hover{
+    background:#ffffff;
+    color:#8f1fff;
+    transition: all 0.3s;
+}
     
 </style>
 <body>
 <?php
+  require 'conection.php';
 
-  $host= 'lbl-db-azureserver.mysql.database.azure.com';
-  $bd= 'contato';
-  $senhabd= 'admadm.001';
-  $userbd = $bd;
- 
-  $conexao = mysql_connect($host,$bd, $senhabd);
-  $banco = mysql_select_db($bd,$conexao);
+  $sql = $pdo->query('SELECT * FROM usuarios');
+  $dataBD = $sql->fetchALl(PDO::FETCH_ASSOC);
 
-  $nome = filter_input(INPUT_POST,'nome');
-  $email = filter_input(INPUT_POST,'email');
-  $mensagem = filter_input(INPUT_POST,'mensagem');
+  $getData = fn($data) => $data  ? $data : header("location:index.html");
+  $getDataMessage = fn($data) => $data ;
 
-
-   if (!$conexao){
-       die ("Erro de conexão com localhost, o seguinte erro ocorreu -> ".mysql_error());
-  }
-
-  if (!$banco){
-    die ("Erro de conexão com banco de dados, o seguinte erro ocorreu -> ".mysql_error());
-  }
-  $query = "INSERT INTO `usuario` ( `nome` , `email` , `mensagem` ) VALUES ('$nome', '$email', '$mensagem')";
-  //    if($nome){
   
-//         echo "<h2>". "Mensagem que foi enviada:  " .$mensagem ."</h2>".
-        
-//             "<h4>"." Olá ".$nome.  " Seu email é ".$email."</h4>" .
-           
-//             "<h2>"." Obrigado por entrar em Contato "."<br>"." Retornaremos em breve"."</h2>";
-//     }else{
-//       echo "<h3>". "Dados inválidos "."<br>". "Volte a página e preencha os Campos corretamente"."</h3>" ;
-//  }
+  $name = $getData(filter_input(INPUT_POST,'nome'));
+  $email = $getData(filter_input(INPUT_POST,'email'));
+  $message = $getDataMessage(filter_input(INPUT_POST,'mensagem'));
+  
+  if($name && $email){
+    $pdo->query("INSERT INTO usuarios (nome,email,mensagem) VALUES ('$name','$email','$message')");
+  }
 
+  echo "Total de registros:" .$sql->rowCount();
+  echo "<pre>";
+  print_r($dataBD);
+  
 ?>
+
+<h1>Nome:<?php echo $name?></h1>
+<h2>Email:<?php echo $email?></h2>
+<h4>Obrigado por entrar em contato,retornaremos em breve!!!</h4>
+<button onclick="back()" >Voltar à navegação</button>
+</div>
 </body>
+<script>
+
+    const back = () => window.location.href="index.html";
+    
+</script>
 </html>
