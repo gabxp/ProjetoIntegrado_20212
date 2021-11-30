@@ -61,9 +61,9 @@
   $getDataMessage = fn($data) => $data ;
 
   
-  $name = $getData(filter_input(INPUT_GET,'nome'));
-  $email = $getData(filter_input(INPUT_GET,'email'));
-  $message = $getDataMessage(filter_input(INPUT_GET,'mensagem'));
+  $name = $getData(filter_input(INPUT_POST,'nome'));
+  $email = $getData(filter_input(INPUT_POST,'email'));
+  $message = $getDataMessage(filter_input(INPUT_POST,'mensagem'));
   
   if($name && $email){
     $pdo->query("INSERT INTO usuario (nome,email,mensagem) VALUES ('$name','$email','$message')");
